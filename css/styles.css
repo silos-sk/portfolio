@@ -269,9 +269,10 @@ input:hover {
   color: #000;
 }
 
-.contact-social a {
+.contact-social a, .card a {
   color: rgb(203, 166, 18);
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .contact-social a:hover {
