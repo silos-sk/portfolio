@@ -220,6 +220,7 @@ main {
 /* GET IN TOUCH */
 .contact {
   margin: 1.5rem 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .contact h2 {
@@ -406,7 +407,7 @@ input:hover {
     object-position: 50%;
   }
 
-  .contact {
+  /* .contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -414,7 +415,7 @@ input:hover {
       "contact-form social";
     gap: 1rem;
     align-items: start;
-  }
+  } */
 
   .git {
     grid-area: git;
