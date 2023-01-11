@@ -398,8 +398,7 @@ input:hover {
   }
 
   .portfolio {
-    grid-template-columns: repeat(4, 0.5fr);
-    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .portfolio-img{
