@@ -1,8 +1,8 @@
+import { getApi, renderPortfolio } from "./utilities.js";
+
 const barIcon = document.querySelector("#bar-icon");
 const navBar = document.querySelector("nav");
 const xIcon = document.querySelector("#x-icon");
-// const portfolioImg = document.querySelector(".portfolio-img");
-// const card = document.querySelector(".card")
 
 barIcon.addEventListener("click", () => {
   barIcon.classList.add("hide");
@@ -15,3 +15,7 @@ xIcon.addEventListener("click", ()=>{
     barIcon.classList.remove("hide")
     navBar.classList.remove("active");
 });
+
+getApi("./js/portfolio.json", "portfolio", renderPortfolio);
+renderPortfolio(portfolio, main);
+
