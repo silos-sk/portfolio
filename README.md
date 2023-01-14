@@ -21,6 +21,7 @@ A collection of my selected completed course and personal projects
 - NodeJS
 - MongoDB
 - Angular
+- TypeScript
 - Bootstrap
 
 
