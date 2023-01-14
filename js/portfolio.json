@@ -44,6 +44,15 @@
         "summary": "Capstone Project using React skills and dependencies created during the PurpleBeard Front-End Development Bootcamp",
         "imgUrl_sm": "images/portfolio-alphabet-326x217.webp",
         "imgUrl_lg": "images/portfolio-alphabet-full.webp"
+      },
+      {
+        "title": "Todo App",
+        "websiteUrl": "https://silos-sk.github.io/pb_git/todo_app/",
+        "gitHubUrl": "https://github.com/silos-sk/pb_git/tree/master/todo_app",
+        "techStack": "HTML5, CSS3, JavaScript",
+        "summary": "An attempt to create a todo app where a user can add, delete, and display todo list from local storage.",
+        "imgUrl_sm": "images/portfolio-todo-326x217.webp",
+        "imgUrl_lg": "images/portfolio-todo-full.webp"
       }
     ]
   }
