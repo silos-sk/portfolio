@@ -35,7 +35,7 @@ export async function getApi (url, data, render) {
         />
         <img class="portfolio-img" 
           src=${data.imgUrl_sm}
-          alt="Portfolio ${data.title}"
+          alt="${data.imgAlt}"
         />
       </picture></a>
       <h2>${data.title}</h2>
