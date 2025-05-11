@@ -134,7 +134,7 @@ h1 {
   font-size: .7rem;
   text-align: center;
   margin-top: 1rem;
-  width: 90%;
+  width: 60%;
   letter-spacing: 0.1rem;
 }
 
@@ -327,6 +327,7 @@ input:hover {
 
   .hero-text p.subtext {
     font-size: 0.8rem;
+    width: 90%;
   }
 
 
