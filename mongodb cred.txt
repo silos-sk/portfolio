@@ -1,0 +1,1 @@
+mongodb+srv://skrys:gVNAPes2NfqFryNe@cluster0.eg7igic.mongodb.net/
