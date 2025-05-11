@@ -9,16 +9,17 @@ html {
   height: 100vh;
   font-family: "Inter Tight", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.255)),
     url("../images/hero.jpg");
-  height: 60%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  height: 40%;
 }
 
 .hide {
@@ -100,22 +101,41 @@ h1 {
   letter-spacing: 3px;
 }
 
+/* Hero Text Animation */
 .hero-text {
-  transform: rotate(-45deg);
+  color:#fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  color: white;
-  position: absolute;
-  top: 180px;
-  left: 15px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px); /* Starts off-screen above */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+/* When it becomes visible, we move it to the normal position */
+.hero-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add slight delay to smooth appearance */
+.hero-text.visible {
+  transition-delay: 0.2s; /* Adjust for smooth transition */
+}
+
 
 .hero-text p {
   font-size: 1.2rem;
-  position: absolute;
-  top: 40px;
+  letter-spacing: 0.1rem;
+}
+
+.hero-text p.subtext {
+  font-size: .7rem;
+  text-align: center;
+  margin-top: 1rem;
+  width: 60%;
+  letter-spacing: 0.1rem;
 }
 
 .hero-text button {
@@ -136,8 +156,8 @@ h1 {
 }
 
 main {
-  max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .avatar {
@@ -163,6 +183,8 @@ main {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .card {
@@ -218,12 +240,12 @@ main {
 }
 
 /* GET IN TOUCH */
-.contact {
+.sec-title {
   margin: 1.5rem 1.5rem;
   padding-bottom: 2rem;
 }
 
-.contact h2 {
+.git h2 {
   font-size: 1.7rem;
   margin-bottom: 1.5rem;
 }
@@ -303,13 +325,17 @@ input:hover {
     left: 140px;
   }
 
+  .hero-text p.subtext {
+    font-size: 0.8rem;
+  }
+
+
   h1 {
     font-size: 2.5rem;
   }
 
   .hero-text p {
     font-size: 1.3rem;
-    top: 50px;
   }
 
   .hero-text button {
@@ -320,8 +346,6 @@ input:hover {
   .portfolio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: flex-start;
     gap: 1rem;
   }
 
@@ -337,6 +361,19 @@ input:hover {
     width: 25%;
     margin-top: -3rem;
   }
+
+  /* Add initial hidden state */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 } /* end of media min-width: 40em */
 
 @media screen and (min-width: 60em) {
@@ -399,6 +436,10 @@ input:hover {
 
   .portfolio {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 
   .portfolio-img{
@@ -456,4 +497,16 @@ input:hover {
   .hero-text button {
     margin-right: 1rem;
   }
+
+
+  .hero-text p.subtext {
+  font-size: 1rem;
+  }
+
+  #portfolio {
+    margin: 0 auto;
+
+  }
+  
+  
 } /* end of media min-width: 90em */
